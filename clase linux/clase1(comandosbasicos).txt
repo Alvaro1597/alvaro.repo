@@ -1,0 +1,39 @@
+##################  CLASE 01  ####################	
+
+Todo directorio inicia en una raiz " / " , de ahi parte todo los directorios.
+
+
+comandos básicos:
+
+1) cd (ubicacion)  ----> sirve para cambiar de ubicacion.  ejemplo:  cd /home/qpex
+2) ls  ----> listar los archivos o directorios de un ubicacion.   ejemplo:  ls /home/qpex
+3) mkdir (nombre)  ----> crear directorio.  	ejemplo:  mkdir sads/
+4) rm -rf (nombre de archivo)  ----> eliminar ya sea archivos o directorio.    	ejemplo:  rm -rf sads/
+5) date   ----> ver fecha del sistema operativo
+6) cp (archivo) (ubicacion a copiar)  ----> copiar el archivo indicado. 		ejemplo:  cp sads/ /home/user
+7) mv (archivo) (nuevaubicacion)   -----> mover archivo o directorio. 		ejemplo:  mv sads/ /home/
+8) mv (archivo)	(archivonuevo)   -----> tmb sirve para cambiar nombre.		ejemplo:  mv sads/ saddds/
+9) touch (nombrearchivo.txt)    ----> crear un archivo txt			ejemplo:  touch lagrimas.txt
+10) cat (archivo)   -----> el comando " cat " sirve para visualizar el archivo sin poder hacer algun cambio.
+11) date   -----> te mostrara el fecha y hora del sistema
+Estos son los comandos basicos utilizados .
+
+
+== Edicion de archivos ==
+para la edicion de archivos se puedo utilizar varios formas, las mas conocidas son :
+_ vi 		ejemplo:  vi texto.txt
+_ vim		ejemplo:  vim texto.txt
+_ nano		ejemplo:  nano texto.txt
+
+" EDITOR VI O VIM  "
+El editor "vi" y el "vim" tienen 2 formas : modo escritura y modo consola.
+
+. Para ingresar al modo escritura del editor vi o vim se debe presionar la tecla " i " 
+al presionar la tecla "i" recien podras editar el archivo podras escribir en el .
+
+. Para salir de modo esxritura y entra al modo consola deberas presionar la tecla " esc " 
+en este modo podras guardar los cambios salir del editor, buscar palabras ,etc-
+
+
+ESTA ES LA PRIMERA PARTE DEL CURSO.
+
