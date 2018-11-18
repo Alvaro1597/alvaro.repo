@@ -1,0 +1,24 @@
+###########  CLASE 4  ################
+
+SELINUX:
+el selinux es un modulo de seguridad del kernel de linux 
+q nos proporcina mecanismos para soportar politicas de seguridad 
+ya sea control de acceso y gestion de de los contribuyentes;
+
+
+el selinux tiene 3 fases.-
+
+-ENFORCING..  Activa todo sistema de seguridad del SELINUX
+-PERMISSIVE.. Permite realizar acciones no permitidas por el selinux , pero solo te mandara alvertencias
+-DISABLED..  Desactiva el selinux haciendo vulnerable el sistema linux
+
+
+COMANDOS:
+al usar "getenforce" se vera el estado en q esta el selinux 
+y para cambiar el estado del selinux usaremos "setenforce" 
+pero esta forma de hacer el cambio solo durara hasta que el sistema 
+vuelva de iniciar .
+
+para q el cambio sea persistente al cambio seberas de editar un archivo 
+en: "vi /etc/selinux/config". Y en el archivo deberas hacer el siguiente cambio SELINUX=enforcing
+o dependiendo el estado en q desee el selinux;
