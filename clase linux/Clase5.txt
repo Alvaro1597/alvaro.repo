@@ -1,0 +1,107 @@
+############3  clase 4  ###############333
+
+
+Procesos PID  ---(proceso de identificacion)
+-
+cada proceso padre identificad por: 
+ PPID (parent process identification)
+ 
+Dentro de los proceso podemos encontrar los :
+
+*estado:R(running);I(idle);Z(zombie);S(suspend)
+
+
+
+
+INIT  ---->es el proceso inicial--->de este viene varios subprocesos
+ 
+
+
+
+
+INIT : se ejecutaban de manera secuencial (un proceso ala vez no se realiza el 4 sin haber realizado el 3)
+
+SYSTEMD: obtiene el paralelismo  (varios procesos ala vez)---->se inicia mas rapido.
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+ACTUALMENTE EL PROCESO INICIAL ES EL :
+
+"SYSTEMD"
+
+
+
+/////////////////////////////////////////////////////////////////
+P
+roceso Init (actualmente systemd)..>es el proceso padre de todoslos procesos
+niveles
+
+# init 0 ---apagar
+
+# init 1 ---modo mantenimiento
+
+# init 6 ---reiniciar
+
+
+CONTROL DE PROCESOS._
+
+proceso:
+
+*background-- en segundo plano (se mantetine aunque cierres el terminal)   ejemp[# date &]
+
+*foreground-- primer plano    (debe mantenerse en una terminal )
+
+
+
+comando ---  jobs  (muestra los procesos en segundo plano)
+
+comando ---  top   (muestra los procesos en background y foreground)
+
+comando ---  nice  (para dar prioridad a los procesos)  en frio.
+
+para llevar un comando a foreground   [#fg %1]
+
+crtl + z lleva de foreground a background.
+
+
+eliminar procesos:__ matar un proceso.
+
+# kill - <signal>  [# proceso]
+  signal:1)proceso termine de forma normal;9)mata y luego pregunta;15)intenta
+terminar los procesos y lee los archivos de configuracion
+    
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+$ 
+(while true; do echo -n B >> log; sleep 1; done)       ---->comando de agregar letra infinitamente
+
+
+al poner <ctrl+z> lo detienes y lo mandas al segundo plano  y para reactivarlos "bg".
+
+
+en otra terminal colocas "$ tail -f log" para ver lo q hizo lo q se ejecuto.
+
+
+
+$ kill -19 %1  detiene el proceso
+
+$ kill %2 %3  detiene los otros 
+
+$ fg elimina los procesos
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&6
+            
+PAKETES::: [rethat developer user]
+RPM(redhat package manager) --->es el gestor de paketer de redhat
+
+
+"YUM" -->gestor de resolucion de dependencias(te descarga los packetes necesarios para instalar uno)
+
+yum trabaja con un esquema de repositorio(almacen de paquetes)
+                       
+externo-internos-optional
