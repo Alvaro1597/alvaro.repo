@@ -1,0 +1,54 @@
+#############  GESTION DE PAQUETES  ##########
+
+En este capitulo aprenderemos gestionar los paquetes en redhat .
+estos lo conseguimos con el mismo disco de redhat o con una suscripcion 
+en redhat.
+
+
+El gestor de paquetes basado en "redhat" es el rpm
+pero este es un gestor no muy bueno ya que al tratar de instalar 
+algun dameon te solicitara instalar antes los daemons prerequisitos.
+
+En cambio el yum instala los daemons con todo lo necesario para su funcionamiento.
+
+//////////////////////////////////////////////
+
+¿Como tener acceso a estos paquetes ?
+
+En este ejemplo usaremos una imagen de disco ("ISO")
+el cual montaremos a un lugar cualquiera y daremos 
+uso a los paquetes mandandolos al sistema.
+
+paso 1:  insertar disco al linux
+paso 2:  montarlo en cualquier lugar ("$ mount -o loop *.iso /mnt/disk")
+paso 3:  habilitar los paquetes para poder utilisarlos . Tendremos q ir a 
+	 [$ cd /etc/yum.repo.d ] y crear un archivo con 'touch' pero este debe 
+	 tener la extencio (.repo) ejemplo "touch base.repo"
+	 lo editamos con el vi o vim ingresango lo siguiente:
+		[PAQUETES]
+		name=repo
+		urlbase=file:///mnt/disk
+		enabled=1
+		gpgcheck=0
+		
+	con eso agregado al archivo salimos y guardamos
+
+luego se ecribe ("yum clean all") para eliminar los paquetes ya q hay en caso de tener
+despues escribir ("yum repolist") esto cargara los paquetes del iso ala maquina .
+en mi caso con el ISO de redhat 7.5 se cargaron 5106 paquetes .
+
+despues de esto los paquetes ya estan listos para ser usados.
+un ejemplo seria instalando el "FTP" q lo usaremos mas adelante.
+
+# yum install ftp.x86_64
+el yum buscara todo lo necesario para este daemon y los instalara con tu permiso
+y ya esta listo para usar el ftp.
+
+con el yum podras hacer lo siguiente :
+check             groups            load-transaction  search
+check-update      help              makecache         shell
+clean             history           provides          update
+deplist           info              reinstall         upgrade
+distro-sync       install           remove            version
+downgrade         list              repolist
+
